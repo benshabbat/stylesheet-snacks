@@ -1,0 +1,24 @@
+/* 3D Flip Card | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.flip {
+  width: 320px; height: 210px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: flip 2.4s ease-in-out infinite alternate;
+}
+.flip div {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  border-radius: 20px;
+  font-size: 46px; font-weight: bold;
+  color: #fff;
+  backface-visibility: hidden;
+  background: linear-gradient(135deg, #ff00cc, #7a5cff);
+}
+.flip .back {
+  background: linear-gradient(135deg, #00ffcc, #3333ff);
+  transform: rotateY(180deg);
+}
+@keyframes flip {
+  to { transform: perspective(900px) rotateY(180deg); }
+}

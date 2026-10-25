@@ -27,7 +27,7 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | 11 | Animated Aurora Background | [code](effects/11-aurora-background/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/11-aurora-background/) |
 | 12 | Gradient Progress Bar | [code](effects/12-progress-bar-fill/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/12-progress-bar-fill/) |
 | 13 | Floating Glass Card | [code](effects/13-glassmorphism-card/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/13-glassmorphism-card/) |
-| 14 | Typewriter Text Effect | [code](effects/14-typewriter-text/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/14-typewriter-text/) |
+| 15 | 3D Flip Card | [code](effects/15-3d-flip-card/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/15-3d-flip-card/) |
 
 ### 🔜 Coming soon
 
