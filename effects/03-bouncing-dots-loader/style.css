@@ -1,0 +1,24 @@
+/* Bouncing Dots Loader | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.dots {
+  display: flex;
+  gap: 22px;
+}
+.dots span {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #00ffcc;
+  animation: bounce .5s ease-in-out infinite alternate;
+}
+.dots span:nth-child(2) {
+  background: #7a5cff;
+  animation-delay: .15s;
+}
+.dots span:nth-child(3) {
+  background: #ff00cc;
+  animation-delay: .3s;
+}
+@keyframes bounce {
+  to { transform: translateY(-70px); }
+}

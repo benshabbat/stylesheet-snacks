@@ -1,0 +1,17 @@
+/* Flickering Neon Text | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.neon {
+  font-size: 130px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow:
+    0 0 8px #fff,
+    0 0 24px #ff00cc,
+    0 0 60px #ff00cc,
+    0 0 110px #ff00cc;
+  animation: flicker 2.5s infinite;
+}
+@keyframes flicker {
+  20%, 24%, 55% { opacity: .35; }
+  22%, 26%, 57% { opacity: 1; }
+}

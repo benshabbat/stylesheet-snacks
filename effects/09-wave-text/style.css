@@ -1,0 +1,14 @@
+/* Wavy Bouncing Letters | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.wave span {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: bold;
+  color: #ffc23d;
+  animation: jump 1.2s ease-in-out infinite;
+  animation-delay: calc(var(--i) * .1s);
+}
+@keyframes jump {
+  20% { transform: translateY(-50px); }
+  40% { transform: translateY(0); }
+}

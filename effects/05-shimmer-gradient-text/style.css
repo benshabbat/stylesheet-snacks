@@ -1,0 +1,16 @@
+/* Shimmering Gradient Text | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.shine {
+  font-size: 140px;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg, #ff00cc, #ffc23d,
+    #00ffcc, #7a5cff, #ff00cc);
+  background-size: 300%;
+  background-clip: text;
+  color: transparent;
+  animation: shine 4s linear infinite;
+}
+@keyframes shine {
+  to { background-position: 300% 0; }
+}

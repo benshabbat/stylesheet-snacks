@@ -1,0 +1,23 @@
+/* Gradient Progress Bar | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.bar {
+  width: 640px;
+  height: 48px;
+  border-radius: 99px;
+  background: #1e2240;
+  overflow: hidden;
+}
+.bar::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg,
+    #ff00cc, #ffc23d, #00ffcc);
+  box-shadow: 0 0 24px #00ffcc;
+  animation: fill 2.5s ease-in-out infinite;
+}
+@keyframes fill {
+  to { width: 100%; }
+}

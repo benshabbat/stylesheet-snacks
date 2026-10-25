@@ -1,0 +1,20 @@
+/* Animated Aurora Background | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.aurora {
+  width: 860px;
+  height: 340px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 20% 30%,
+      #ff00cc, transparent 45%),
+    radial-gradient(circle at 80% 70%,
+      #00ffcc, transparent 45%),
+    radial-gradient(circle at 50% 50%,
+      #3333ff, transparent 60%);
+  background-size: 180% 180%;
+  filter: blur(28px);
+  animation: drift 4s ease-in-out infinite alternate;
+}
+@keyframes drift {
+  to { background-position: 100% 100%; }
+}

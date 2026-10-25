@@ -1,0 +1,17 @@
+/* Pulsing Ring Effect | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.pulse {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  color: #fff;
+  background: #ff00cc;
+  box-shadow: 0 0 0 0 #ff00ccaa;
+  animation: ring 1.4s ease-out infinite;
+}
+@keyframes ring {
+  to { box-shadow: 0 0 0 80px #ff00cc00; }
+}

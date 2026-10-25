@@ -1,0 +1,23 @@
+/* Skeleton Loading Shimmer | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.skel {
+  width: 560px;
+  display: grid;
+  gap: 22px;
+}
+.skel i {
+  height: 36px;
+  border-radius: 12px;
+  background: linear-gradient(90deg,
+    #1e2240 30%, #3a4178 50%, #1e2240 70%);
+  background-size: 300% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+.skel i:first-child {
+  width: 60%;
+  height: 52px;
+}
+@keyframes shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}

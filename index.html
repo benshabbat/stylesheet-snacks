@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StyleSheet Snacks | Pure CSS animations</title>
+  <meta name="description" content="12 bite-sized CSS animations with zero JavaScript. Free to copy.">
+  <meta property="og:image" content="https://benshabbat.github.io/stylesheet-snacks/assets/banner.jpg">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: radial-gradient(circle at 50% 0, #142048, #060e1f 60%) fixed; color: #e6e6f0;
+           font-family: system-ui, sans-serif; }
+    header { text-align: center; padding: 48px 16px 24px; }
+    header img { width: 160px; }
+    h1 { margin: 12px 0 4px; font-size: clamp(28px, 5vw, 48px); }
+    h1 span { background: linear-gradient(90deg, #ff00cc, #00ffcc); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    header p { color: #9a9ed0; margin: 0 0 20px; }
+    .yt { display: inline-block; padding: 12px 26px; border-radius: 999px; background: #ff0033; color: #fff;
+          font-weight: bold; text-decoration: none; }
+    main { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px;
+           max-width: 1280px; margin: 0 auto; padding: 16px 16px 64px; }
+    .card { display: block; border-radius: 18px; overflow: hidden; background: #12142a; border: 1px solid #262a4f;
+            color: inherit; text-decoration: none; transition: border-color .2s; }
+    .card:hover { border-color: #00ffcc; }
+    .card iframe { display: block; width: 960px; height: 420px; border: 0; pointer-events: none;
+                   transform: scale(var(--k, .3)); transform-origin: 0 0; margin-bottom: calc(420px * (var(--k, .3) - 1)); }
+    .card span { display: block; padding: 12px 16px; font-size: 15px; }
+    .card b { color: #ffc23d; margin-right: 6px; }
+    .soon { display: grid; place-items: center; min-height: 120px; border-style: dashed; color: #7c80b8;
+             text-align: center; padding: 20px; }
+    .soon b { display: block; font-size: 28px; color: #ffc23d; margin: 0 0 6px; }
+    footer { text-align: center; color: #5d6196; padding-bottom: 40px; }
+    footer a { color: #9a9ed0; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="StyleSheet Snacks">
+    <h1>Pure CSS. <span>Zero JavaScript.</span></h1>
+    <p>12 bite-sized animations so far, 80 more coming soon. Click any card for the code.</p>
+    <a class="yt" href="https://www.youtube.com/@StyleSheetSnacks">▶ Watch on YouTube</a>
+  </header>
+  <main>
+    <a class="card" href="effects/01-animated-neon-button/style.css"><iframe src="effects/01-animated-neon-button/" loading="lazy" title="Animated Neon Button" tabindex="-1"></iframe><span><b>01</b> Animated Neon Button</span></a>
+    <a class="card" href="effects/02-spinning-gradient-border/style.css"><iframe src="effects/02-spinning-gradient-border/" loading="lazy" title="Spinning Gradient Border" tabindex="-1"></iframe><span><b>02</b> Spinning Gradient Border</span></a>
+    <a class="card" href="effects/03-bouncing-dots-loader/style.css"><iframe src="effects/03-bouncing-dots-loader/" loading="lazy" title="Bouncing Dots Loader" tabindex="-1"></iframe><span><b>03</b> Bouncing Dots Loader</span></a>
+    <a class="card" href="effects/04-neon-text-flicker/style.css"><iframe src="effects/04-neon-text-flicker/" loading="lazy" title="Flickering Neon Text" tabindex="-1"></iframe><span><b>04</b> Flickering Neon Text</span></a>
+    <a class="card" href="effects/05-shimmer-gradient-text/style.css"><iframe src="effects/05-shimmer-gradient-text/" loading="lazy" title="Shimmering Gradient Text" tabindex="-1"></iframe><span><b>05</b> Shimmering Gradient Text</span></a>
+    <a class="card" href="effects/06-ring-spinner/style.css"><iframe src="effects/06-ring-spinner/" loading="lazy" title="Smooth Ring Spinner" tabindex="-1"></iframe><span><b>06</b> Smooth Ring Spinner</span></a>
+    <a class="card" href="effects/07-pulse-ring-button/style.css"><iframe src="effects/07-pulse-ring-button/" loading="lazy" title="Pulsing Ring Effect" tabindex="-1"></iframe><span><b>07</b> Pulsing Ring Effect</span></a>
+    <a class="card" href="effects/08-morphing-blob/style.css"><iframe src="effects/08-morphing-blob/" loading="lazy" title="Morphing Gradient Blob" tabindex="-1"></iframe><span><b>08</b> Morphing Gradient Blob</span></a>
+    <a class="card" href="effects/09-wave-text/style.css"><iframe src="effects/09-wave-text/" loading="lazy" title="Wavy Bouncing Letters" tabindex="-1"></iframe><span><b>09</b> Wavy Bouncing Letters</span></a>
+    <a class="card" href="effects/10-skeleton-loader/style.css"><iframe src="effects/10-skeleton-loader/" loading="lazy" title="Skeleton Loading Shimmer" tabindex="-1"></iframe><span><b>10</b> Skeleton Loading Shimmer</span></a>
+    <a class="card" href="effects/11-aurora-background/style.css"><iframe src="effects/11-aurora-background/" loading="lazy" title="Animated Aurora Background" tabindex="-1"></iframe><span><b>11</b> Animated Aurora Background</span></a>
+    <a class="card" href="effects/12-progress-bar-fill/style.css"><iframe src="effects/12-progress-bar-fill/" loading="lazy" title="Gradient Progress Bar" tabindex="-1"></iframe><span><b>12</b> Gradient Progress Bar</span></a>
+    <a class="card soon" href="https://www.youtube.com/@StyleSheetSnacks"><span><b>🔜 +80</b>more snacks coming soon<br>Subscribe so you don't miss them</span></a>
+  </main>
+  <footer>MIT licensed · <a href="https://github.com/benshabbat/stylesheet-snacks">GitHub</a></footer>
+  <script>
+    // fit each 960x420 preview to its card width
+    const fit = () => document.querySelectorAll('.card').forEach(c => c.style.setProperty('--k', c.clientWidth / 960));
+    addEventListener('resize', fit); fit();
+  </script>
+</body>
+</html>

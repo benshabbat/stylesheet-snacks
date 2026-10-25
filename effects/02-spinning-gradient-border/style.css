@@ -1,0 +1,23 @@
+/* Spinning Gradient Border | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.glow-card {
+  width: 420px;
+  height: 260px;
+  border-radius: 24px;
+  border: 6px solid transparent;
+  background:
+    linear-gradient(#12142a, #12142a)
+      padding-box,
+    conic-gradient(from var(--a),
+      #ff00cc, #00ffcc, #ff00cc)
+      border-box;
+  animation: spin 3s linear infinite;
+}
+@property --a {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin {
+  to { --a: 360deg; }
+}

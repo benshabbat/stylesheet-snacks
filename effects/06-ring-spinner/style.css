@@ -1,0 +1,17 @@
+/* Smooth Ring Spinner | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.loader {
+  width: 180px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    #0000 10%, #00ffcc);
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(100% - 24px),
+    #000 0);
+  animation: turn 1s linear infinite;
+}
+@keyframes turn {
+  to { transform: rotate(1turn); }
+}

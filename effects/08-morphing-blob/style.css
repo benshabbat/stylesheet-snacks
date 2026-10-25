@@ -1,0 +1,18 @@
+/* Morphing Gradient Blob | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.blob {
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(
+    135deg, #ff00cc, #00ffcc);
+  border-radius:
+    42% 58% 70% 30% / 45% 45% 55% 55%;
+  animation: morph 5s ease-in-out infinite;
+}
+@keyframes morph {
+  50% {
+    border-radius:
+      70% 30% 46% 54% / 30% 39% 61% 70%;
+    transform: rotate(180deg);
+  }
+}
