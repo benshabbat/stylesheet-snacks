@@ -1,0 +1,24 @@
+/* Beating Heart Shape | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.heart {
+  width: 110px; height: 110px;
+  position: relative;
+  background: #ff2d6f;
+  transform: rotate(45deg);
+  filter: drop-shadow(0 0 30px #ff2d6f);
+  animation: beat 1.1s ease-in-out infinite;
+}
+.heart::before,
+.heart::after {
+  content: ''; position: absolute;
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: inherit;
+}
+.heart::before { left: -55px; }
+.heart::after { top: -55px; }
+@keyframes beat {
+  15% { transform: rotate(45deg) scale(1.25); }
+  30% { transform: rotate(45deg) scale(1.05); }
+  45% { transform: rotate(45deg) scale(1.2); }
+}
