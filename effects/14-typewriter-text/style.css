@@ -1,0 +1,20 @@
+/* Typewriter Text Effect | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.type {
+  width: 15ch;
+  font-family: monospace;
+  font-size: 66px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 5px solid #00ffcc;
+  animation:
+    typing 2.5s steps(15) infinite alternate,
+    caret .5s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+}
+@keyframes caret {
+  50% { border-color: transparent; }
+}

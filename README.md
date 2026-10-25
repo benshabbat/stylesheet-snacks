@@ -10,7 +10,7 @@
 Every effect here is a YouTube Short where the code is typed live and the result runs next to it.
 Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, use it.
 
-## Effects (12 out, 80 coming soon 🔜)
+## Effects (14 out, 78 coming soon 🔜)
 
 | # | Effect | Code | Live |
 |---|--------|------|------|
@@ -26,10 +26,12 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | 10 | Skeleton Loading Shimmer | [code](effects/10-skeleton-loader/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/10-skeleton-loader/) |
 | 11 | Animated Aurora Background | [code](effects/11-aurora-background/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/11-aurora-background/) |
 | 12 | Gradient Progress Bar | [code](effects/12-progress-bar-fill/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/12-progress-bar-fill/) |
+| 13 | Floating Glass Card | [code](effects/13-glassmorphism-card/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/13-glassmorphism-card/) |
+| 14 | Typewriter Text Effect | [code](effects/14-typewriter-text/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/14-typewriter-text/) |
 
 ### 🔜 Coming soon
 
-80 more snacks are on the way. A new one lands here the day its Short goes live.
+78 more snacks are on the way. A new one lands here the day its Short goes live.
 [Subscribe on YouTube](https://www.youtube.com/@StyleSheetSnacks) so you don't miss them.
 
 ## Run locally

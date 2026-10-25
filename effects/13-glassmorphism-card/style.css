@@ -1,0 +1,24 @@
+/* Floating Glass Card | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.scene {
+  width: 860px; height: 340px;
+  border-radius: 28px;
+  display: grid; place-items: center;
+  background:
+    radial-gradient(circle at 38% 40%,
+      #ff00cc 0 70px, transparent 72px),
+    radial-gradient(circle at 63% 62%,
+      #00ffcc 0 80px, transparent 82px);
+}
+.glass {
+  padding: 46px 110px;
+  font-size: 64px; font-weight: bold;
+  color: #fff; border-radius: 24px;
+  background: #ffffff1f;
+  border: 1px solid #ffffff55;
+  backdrop-filter: blur(18px);
+  animation: float 3s ease-in-out infinite alternate;
+}
+@keyframes float {
+  to { transform: translateY(-24px) rotate(-3deg); }
+}
