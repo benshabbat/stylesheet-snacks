@@ -10,7 +10,7 @@
 Every effect here is a YouTube Short where the code is typed live and the result runs next to it.
 Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, use it.
 
-## Effects (16 out, 116 coming soon 🔜)
+## Effects (18 out, 142 coming soon 🔜)
 
 | # | Effect | Code | Live |
 |---|--------|------|------|
@@ -30,10 +30,12 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | 14 | Typewriter Text Effect | [code](effects/14-typewriter-text/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/14-typewriter-text/) |
 | 15 | 3D Flip Card | [code](effects/15-3d-flip-card/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/15-3d-flip-card/) |
 | 16 | Beating Heart Shape | [code](effects/16-beating-heart/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/16-beating-heart/) |
+| 17 | Glitch Text Effect | [code](effects/17-glitch-text/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/17-glitch-text/) |
+| 18 | Orbiting Planet Loader | [code](effects/18-orbit-loader/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/18-orbit-loader/) |
 
 ### 🔜 Coming soon
 
-116 more snacks are on the way. A new one lands here the day its Short goes live.
+142 more snacks are on the way. A new one lands here the day its Short goes live.
 [Subscribe on YouTube](https://www.youtube.com/@StyleSheetSnacks) so you don't miss them.
 
 ## Run locally

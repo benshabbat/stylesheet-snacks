@@ -1,0 +1,25 @@
+/* Glitch Text Effect | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.glitch {
+  position: relative;
+  font-size: 140px; font-weight: bold;
+  color: #fff;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute; inset: 0;
+}
+.glitch::before {
+  color: #ff00cc;
+  animation: glitch .9s steps(2) infinite;
+}
+.glitch::after {
+  color: #00ffcc;
+  animation: glitch .7s steps(2) infinite reverse;
+}
+@keyframes glitch {
+  0% { clip-path: inset(10% 0 60% 0); translate: -8px; }
+  50% { clip-path: inset(55% 0 12% 0); translate: 8px; }
+  100% { clip-path: inset(30% 0 40% 0); translate: -4px; }
+}

@@ -1,0 +1,26 @@
+/* Orbiting Planet Loader | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.orbit {
+  width: 220px; aspect-ratio: 1;
+  position: relative; border-radius: 50%;
+  border: 2px dashed #ffffff40;
+  animation: spin 2.5s linear infinite;
+}
+.orbit::before,
+.orbit::after {
+  content: ''; position: absolute; border-radius: 50%;
+}
+.orbit::before {
+  inset: 70px;
+  background: radial-gradient(#ffc23d, #ff00cc);
+  box-shadow: 0 0 40px #ff00cc;
+}
+.orbit::after {
+  width: 30px; height: 30px;
+  top: -16px; left: calc(50% - 15px);
+  background: #00ffcc;
+  box-shadow: 0 0 20px #00ffcc;
+}
+@keyframes spin {
+  to { rotate: 1turn; }
+}
