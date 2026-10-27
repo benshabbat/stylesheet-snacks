@@ -1,0 +1,24 @@
+/* Music Equalizer Bars | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.eq {
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+}
+.eq i {
+  width: 30px;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(#ff00cc, #00ffcc);
+  transform-origin: bottom;
+  animation: eq .9s ease-in-out infinite alternate;
+}
+.eq i:nth-child(2) { animation-delay: -.4s; }
+.eq i:nth-child(3) { animation-delay: -.7s; }
+.eq i:nth-child(4) { animation-delay: -.2s; }
+.eq i:nth-child(5) { animation-delay: -.6s; }
+.eq i:nth-child(6) { animation-delay: -.3s; }
+@keyframes eq {
+  from { transform: scaleY(.15); }
+}

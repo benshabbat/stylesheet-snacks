@@ -1,0 +1,25 @@
+/* Liquid Wave Loader | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.water {
+  width: 230px;
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 6px solid #00ffcc;
+  box-shadow: 0 0 40px #00ffcc66;
+}
+.water::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  left: -50%;
+  top: 50%;
+  border-radius: 40%;
+  background: #00ffcc;
+  animation: wave 4s linear infinite;
+}
+@keyframes wave {
+  to { rotate: 1turn; }
+}
