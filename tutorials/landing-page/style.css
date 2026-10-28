@@ -1,0 +1,138 @@
+/* 1. Base & Aurora */
+.page {
+  position: relative; overflow: hidden;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  color: #e6e6f0;
+  background: #060e1f;
+}
+.page::before {
+  content: ''; position: absolute; inset: -20%;
+  background:
+    radial-gradient(circle at 20% 20%, #7a5cff66, transparent 40%),
+    radial-gradient(circle at 80% 30%, #00ffcc44, transparent 40%);
+  filter: blur(40px);
+  animation: aurora 10s ease-in-out infinite alternate;
+}
+.page > * { position: relative; }
+@keyframes aurora {
+  to { translate: 6% 4%; rotate: 8deg; }
+}
+
+/* 2. Navigation Bar */
+.nav {
+  display: flex; align-items: center; gap: 32px;
+  padding: 24px 64px;
+}
+.logo { margin-right: auto; font-size: 26px; }
+.nav a {
+  font-size: 18px;
+  color: #c9cbf5;
+  text-decoration: none;
+}
+.nav .nav-cta {
+  padding: 10px 22px;
+  border-radius: 99px;
+  color: #060e1f;
+  background: #00ffcc;
+}
+
+/* 3. Gradient Hero */
+.hero {
+  padding: 100px 64px 80px;
+  text-align: center;
+}
+.hero h1 {
+  max-width: 900px; margin: 0 auto;
+  font-size: 72px; line-height: 1.05;
+}
+.hero h1 span {
+  color: transparent;
+  background: linear-gradient(90deg, #ff00cc, #00ffcc, #ff00cc) 0 0 / 200% 100%;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+}
+.hero p { margin: 24px 0 40px; font-size: 22px; color: #9a9ed0; }
+@keyframes shine {
+  to { background-position: 200% 0; }
+}
+
+/* 4. Glowing Buttons */
+.ctas { display: flex; justify-content: center; gap: 20px; }
+.btn {
+  padding: 16px 34px;
+  border-radius: 99px;
+  font-size: 18px; font-weight: bold;
+  text-decoration: none;
+}
+.btn.primary {
+  color: #060e1f;
+  background: #00ffcc;
+  box-shadow: 0 0 0 0 #00ffcc88;
+  animation: pulse 2s infinite;
+}
+.btn.ghost { color: #fff; border: 2px solid #ffffff44; }
+@keyframes pulse {
+  to { box-shadow: 0 0 0 18px #00ffcc00; }
+}
+
+/* 5. Glass Feature Cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 40px 64px;
+}
+.card {
+  padding: 32px; border-radius: 20px;
+  background: #ffffff0d;
+  border: 1px solid #ffffff1a;
+  backdrop-filter: blur(10px);
+  animation: float 4s ease-in-out infinite;
+}
+.card:nth-child(2) { animation-delay: -1.3s; }
+.card:nth-child(3) { animation-delay: -2.6s; }
+.card i { font-size: 36px; font-style: normal; }
+.card h3 { margin: 16px 0 8px; font-size: 24px; }
+.card p { margin: 0; color: #9a9ed0; }
+@keyframes float {
+  50% { translate: 0 -10px; }
+}
+
+/* 6. Pricing Card */
+.pricing { display: grid; place-items: center; padding: 60px 64px; }
+.plan {
+  width: 320px; padding: 36px;
+  display: grid; gap: 10px; justify-items: center;
+  border: 3px solid transparent;
+  border-radius: 24px;
+  background:
+    linear-gradient(#0d1533, #0d1533) padding-box,
+    linear-gradient(90deg, #ff00cc, #00ffcc, #7a5cff, #ff00cc) 0 0 / 300% 100% border-box;
+  animation: flow 4s linear infinite;
+}
+.plan small {
+  padding: 4px 12px; border-radius: 99px;
+  font-weight: bold;
+  color: #060e1f; background: #ffc23d;
+}
+.plan h3 { margin: 0; font-size: 28px; }
+.plan b { font-size: 56px; }
+.plan b i { font-size: 18px; font-style: normal; color: #9a9ed0; }
+@keyframes flow {
+  to { background-position: 0 0, 300% 0; }
+}
+
+/* 7. Entrance Animations */
+footer { padding: 40px; text-align: center; color: #7c80b8; }
+.hero, .features, .pricing {
+  animation: rise .9s ease-out both;
+}
+.features { animation-delay: .25s; }
+.pricing { animation-delay: .5s; }
+@keyframes rise {
+  from { opacity: 0; translate: 0 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; }
+}

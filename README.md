@@ -10,7 +10,7 @@
 Every effect here is a YouTube Short where the code is typed live and the result runs next to it.
 Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, use it.
 
-## Effects (20 out, 140 coming soon 🔜)
+## Effects (22 out, 138 coming soon 🔜)
 
 | # | Effect | Code | Live |
 |---|--------|------|------|
@@ -34,11 +34,20 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | 18 | Orbiting Planet Loader | [code](effects/18-orbit-loader/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/18-orbit-loader/) |
 | 19 | Liquid Wave Loader | [code](effects/19-water-fill-loader/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/19-water-fill-loader/) |
 | 20 | Music Equalizer Bars | [code](effects/20-equalizer-bars/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/20-equalizer-bars/) |
+| 21 | Spotlight Text Reveal | [code](effects/21-spotlight-text/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/21-spotlight-text/) |
+| 22 | Self Drawing Star | [code](effects/22-svg-draw-star/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/22-svg-draw-star/) |
 
 ### 🔜 Coming soon
 
-140 more snacks are on the way. A new one lands here the day its Short goes live.
+138 more snacks are on the way. A new one lands here the day its Short goes live.
 [Subscribe on YouTube](https://www.youtube.com/@StyleSheetSnacks) so you don't miss them.
+
+
+## 🛠️ Tutorials: build it step by step
+
+| Tutorial | Code | Live |
+|---|---|---|
+| Build an Animated Landing Page with Pure CSS (Step by Step, Zero JavaScript) | [code](tutorials/landing-page/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/landing-page/) |
 
 ## Run locally
 

@@ -1,0 +1,18 @@
+/* Self Drawing Star | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.draw {
+  width: 280px;
+}
+.draw path {
+  fill: none;
+  stroke: #ffc23d;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 720;
+  stroke-dashoffset: 720;
+  filter: drop-shadow(0 0 10px #ffc23d);
+  animation: draw 2.2s ease-in-out infinite alternate;
+}
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}

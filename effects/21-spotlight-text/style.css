@@ -1,0 +1,17 @@
+/* Spotlight Text Reveal | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.spot {
+  font-size: 120px;
+  font-weight: bold;
+  color: transparent;
+  background:
+    radial-gradient(circle closest-side,
+      #fff, #ffc23d 45%, transparent)
+      0 50% / 35% 260% no-repeat,
+    #2a2f4a;
+  background-clip: text;
+  animation: sweep 2.4s ease-in-out infinite alternate;
+}
+@keyframes sweep {
+  to { background-position: 100% 50%, 0 0; }
+}
