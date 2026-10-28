@@ -1,0 +1,26 @@
+/* Bouncing Ball Squash | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.stage-ball {
+  height: 320px;
+  display: grid; justify-items: center;
+  align-content: end;
+}
+.ball {
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%,
+    #fff, #ff00cc 40%, #7a1060);
+  transform-origin: bottom;
+  animation: bounce .8s ease-in infinite alternate;
+}
+.shadow {
+  width: 90px; height: 14px;
+  border-radius: 50%; background: #ff00cc44;
+  animation: shrink .8s ease-in infinite alternate;
+}
+@keyframes bounce {
+  from { transform: translateY(-210px); }
+  85% { transform: translateY(0) scale(1); }
+  to { transform: translateY(0) scale(1.3, .75); }
+}
+@keyframes shrink { from { scale: .4; opacity: .4; } }
