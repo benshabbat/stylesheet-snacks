@@ -1,0 +1,21 @@
+/* Rainbow Conic Orb | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.orb {
+  width: 260px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff00cc, #ffc23d, #00ffcc,
+    #3333ff, #ff00cc);
+  box-shadow: 0 0 90px #ff00cc88;
+  filter: blur(4px);
+  animation:
+    spin 3s linear infinite,
+    hue 6s linear infinite;
+}
+@keyframes spin {
+  to { rotate: 1turn; }
+}
+@keyframes hue {
+  to { filter: blur(4px) hue-rotate(360deg); }
+}
