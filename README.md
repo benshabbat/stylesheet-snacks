@@ -10,7 +10,7 @@
 Every effect here is a YouTube Short where the code is typed live and the result runs next to it.
 Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, use it.
 
-## Effects (23 out, 137 coming soon 🔜)
+## Effects (23 out, 154 coming soon 🔜)
 
 | # | Effect | Code | Live |
 |---|--------|------|------|
@@ -40,7 +40,7 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 
 ### 🔜 Coming soon
 
-137 more snacks are on the way. A new one lands here the day its Short goes live.
+154 more snacks are on the way. A new one lands here the day its Short goes live.
 [Subscribe on YouTube](https://www.youtube.com/@StyleSheetSnacks) so you don't miss them.
 
 
