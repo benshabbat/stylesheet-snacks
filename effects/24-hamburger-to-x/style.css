@@ -1,0 +1,20 @@
+/* Hamburger Menu Morph | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.burger {
+  width: 130px;
+  display: grid;
+  gap: 22px;
+}
+.burger i {
+  height: 14px;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #ff00cc, #00ffcc);
+  animation: x 1.6s ease-in-out infinite alternate;
+}
+.burger i:nth-child(1) { --t: translateY(36px) rotate(45deg); }
+.burger i:nth-child(2) { --t: scaleX(0); }
+.burger i:nth-child(3) { --t: translateY(-36px) rotate(-45deg); }
+@keyframes x {
+  0%, 25% { transform: none; }
+  75%, 100% { transform: var(--t); }
+}

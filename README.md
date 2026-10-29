@@ -10,7 +10,7 @@
 Every effect here is a YouTube Short where the code is typed live and the result runs next to it.
 Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, use it.
 
-## Effects (23 out, 154 coming soon 🔜)
+## Effects (24 out, 153 coming soon 🔜)
 
 | # | Effect | Code | Live |
 |---|--------|------|------|
@@ -37,10 +37,11 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | 21 | Spotlight Text Reveal | [code](effects/21-spotlight-text/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/21-spotlight-text/) |
 | 22 | Self Drawing Star | [code](effects/22-svg-draw-star/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/22-svg-draw-star/) |
 | 23 | Bouncing Ball Squash | [code](effects/23-bouncing-ball-squash/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/23-bouncing-ball-squash/) |
+| 24 | Hamburger Menu Morph | [code](effects/24-hamburger-to-x/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/24-hamburger-to-x/) |
 
 ### 🔜 Coming soon
 
-154 more snacks are on the way. A new one lands here the day its Short goes live.
+153 more snacks are on the way. A new one lands here the day its Short goes live.
 [Subscribe on YouTube](https://www.youtube.com/@StyleSheetSnacks) so you don't miss them.
 
 
