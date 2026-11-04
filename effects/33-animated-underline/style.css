@@ -1,0 +1,15 @@
+/* Gradient Underline Animation | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.link {
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 10px;
+  background:
+    linear-gradient(90deg, #ff00cc, #00ffcc)
+    0 100% / 0 8px no-repeat;
+  animation: line 2s ease-in-out infinite alternate;
+}
+@keyframes line {
+  to { background-size: 100% 8px; }
+}

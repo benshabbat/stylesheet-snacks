@@ -1,0 +1,110 @@
+body { margin: 0; }
+
+/* 1. Page & Title */
+.page {
+  min-height: 100vh;
+  display: grid; place-content: center;
+  gap: 28px;
+  background: #0d1124;
+  font-family: system-ui, sans-serif;
+  color: #fff;
+}
+h1 { margin: 0; text-align: center; font-size: 44px; }
+
+/* 2. Slides */
+.slider {
+  position: relative;
+  width: min(900px, 92vw);
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px #000a;
+}
+.slider input {
+  position: absolute;
+  opacity: 0;
+}
+.track {
+  display: flex;
+  height: 100%;
+}
+figure {
+  position: relative;
+  flex: 0 0 100%;
+  margin: 0;
+}
+figure img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 3. Captions */
+figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 70px 36px 30px;
+  font-size: 34px;
+  font-weight: 700;
+  background: linear-gradient(transparent, #000b);
+}
+
+/* 4. Dots */
+.dots {
+  position: absolute;
+  bottom: 34px; right: 36px;
+  display: flex; gap: 10px;
+}
+.dots label {
+  width: 14px; height: 14px;
+  border-radius: 99px;
+  background: #fff6;
+  cursor: pointer;
+  transition: .3s;
+}
+#s1:checked ~ .dots [for=s1],
+#s2:checked ~ .dots [for=s2],
+#s3:checked ~ .dots [for=s3],
+#s4:checked ~ .dots [for=s4] {
+  width: 38px;
+  background: #fff;
+}
+
+/* 5. Slide Moving */
+.track {
+  transition: translate .7s
+    cubic-bezier(.65, 0, .35, 1);
+}
+#s2:checked ~ .track { translate: -100%; }
+#s3:checked ~ .track { translate: -200%; }
+#s4:checked ~ .track { translate: -300%; }
+
+/* 6. Arrows */
+figure label {
+  position: absolute;
+  top: 50%; translate: 0 -50%;
+  width: 60px; height: 60px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: #fff3;
+  backdrop-filter: blur(8px);
+  font-size: 40px;
+  cursor: pointer;
+}
+.prev { left: 22px; }
+.next { right: 22px; }
+
+/* 7. Mobile */
+@media (max-width: 600px) {
+  h1 { font-size: 30px; }
+  .slider { border-radius: 16px; }
+  figcaption {
+    padding: 40px 18px 16px;
+    font-size: 20px;
+  }
+  figure label {
+    width: 40px; height: 40px;
+    font-size: 28px;
+  }
+  .dots { bottom: 20px; right: 18px; }
+}

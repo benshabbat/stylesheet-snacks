@@ -1,0 +1,16 @@
+/* Candy Stripe Progress | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.stripes {
+  width: 640px; height: 60px;
+  border-radius: 99px;
+  border: 3px solid #ffffff30;
+  background: linear-gradient(-45deg,
+    #ff00cc 25%, #7a5cff 0 50%,
+    #ff00cc 0 75%, #7a5cff 0)
+    0 0 / 56px 56px;
+  box-shadow: 0 0 30px #ff00cc66;
+  animation: move .6s linear infinite;
+}
+@keyframes move {
+  to { background-position: 56px 0; }
+}

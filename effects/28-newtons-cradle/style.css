@@ -1,0 +1,26 @@
+/* Newton's Cradle Loader | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.cradle {
+  display: flex;
+  border-top: 4px solid #ffffff66;
+}
+.cradle span {
+  width: 60px;
+  height: 200px;
+  transform-origin: top;
+  background:
+    radial-gradient(circle at 50% 170px,
+      #ffc23d 0 28px, transparent 29px),
+    linear-gradient(#ffffff66, #ffffff66)
+      50% 0 / 2px 142px no-repeat;
+}
+.cradle span:first-child { animation: swingL 1.2s ease-in-out infinite; }
+.cradle span:last-child { animation: swingR 1.2s ease-in-out infinite; }
+@keyframes swingL {
+  25% { rotate: 35deg; }
+  50% { rotate: 0deg; }
+}
+@keyframes swingR {
+  50% { rotate: 0deg; }
+  75% { rotate: -35deg; }
+}

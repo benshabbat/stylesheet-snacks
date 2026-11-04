@@ -1,0 +1,17 @@
+/* Moving Dot Pattern | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.dots-bg {
+  width: 860px; height: 340px;
+  border-radius: 28px;
+  background:
+    radial-gradient(#00ffcc 4px, transparent 5px)
+      0 0 / 44px 44px,
+    radial-gradient(#ff00cc 4px, transparent 5px)
+      22px 22px / 44px 44px,
+    #12142a;
+  mask: radial-gradient(ellipse, #000 45%, transparent 75%);
+  animation: drift 2s linear infinite;
+}
+@keyframes drift {
+  to { background-position: 44px 44px, 66px 66px, 0 0; }
+}

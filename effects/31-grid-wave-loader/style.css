@@ -1,0 +1,19 @@
+/* Grid Wave Loader | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.grid {
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(3, 64px);
+}
+.grid span {
+  --row: 0; --col: 0;
+  aspect-ratio: 1; border-radius: 14px;
+  background: linear-gradient(135deg, #ff00cc, #00ffcc);
+  animation: pop 1.2s ease-in-out infinite;
+  animation-delay:
+    calc((var(--row) + var(--col)) * .12s);
+}
+.grid span:nth-child(3n+2) { --col: 1; }
+.grid span:nth-child(3n) { --col: 2; }
+.grid span:nth-child(n+4) { --row: 1; }
+.grid span:nth-child(n+7) { --row: 2; }
+@keyframes pop { 50% { scale: .3; opacity: .3; } }

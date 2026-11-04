@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Slider | StyleSheet Snacks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <h1>Explore the World</h1>
+  <div class="slider">
+    <input type="radio" name="slide" id="s1" checked>
+    <input type="radio" name="slide" id="s2">
+    <input type="radio" name="slide" id="s3">
+    <input type="radio" name="slide" id="s4">
+
+    <div class="track">
+      <figure>
+        <img src="img/mountains.jpg" alt="Sunset mountains">
+        <figcaption>Misty Mountains</figcaption>
+        <label for="s4" class="prev">‹</label>
+        <label for="s2" class="next">›</label>
+      </figure>
+      <figure>
+        <img src="img/coast.jpg" alt="Sunset over the sea">
+        <figcaption>Golden Coast</figcaption>
+        <label for="s1" class="prev">‹</label>
+        <label for="s3" class="next">›</label>
+      </figure>
+      <figure>
+        <img src="img/forest.jpg" alt="Misty pine forest">
+        <figcaption>Pine Forest</figcaption>
+        <label for="s2" class="prev">‹</label>
+        <label for="s4" class="next">›</label>
+      </figure>
+      <figure>
+        <img src="img/desert.jpg" alt="Dunes at night">
+        <figcaption>Desert Night</figcaption>
+        <label for="s3" class="prev">‹</label>
+        <label for="s1" class="next">›</label>
+      </figure>
+    </div>
+
+    <div class="dots">
+      <label for="s1"></label>
+      <label for="s2"></label>
+      <label for="s3"></label>
+      <label for="s4"></label>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

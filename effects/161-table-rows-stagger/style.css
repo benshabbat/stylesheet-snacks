@@ -1,0 +1,51 @@
+/* Animated Table Rows | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+:root {
+  --card: #151c35;
+  --admin: #ff79c6;
+  --editor: #8be9fd;
+  --viewer: #c9cbf5;
+  --step: .15s;
+}
+.tbl {
+  width: 640px; padding: 10px 30px;
+  border-spacing: 0;
+  border-radius: 24px; background: var(--card);
+  font: 28px sans-serif; color: #e6e6f0;
+}
+.tbl th {
+  padding: 14px 0; text-align: left;
+  font-size: 18px; letter-spacing: 2px;
+  text-transform: uppercase; color: #8a8fb8;
+}
+.tbl td {
+  padding: 18px 0;
+  border-top: 1px solid #ffffff14;
+}
+.tbl :is(th, td):last-child { text-align: right; }
+.tbl tbody tr {
+  animation: rowIn 4s ease-out infinite both;
+  animation-delay: calc(var(--i, 0) * var(--step));
+}
+tbody tr:nth-child(2) { --i: 1; }
+tbody tr:nth-child(3) { --i: 2; }
+tbody tr:nth-child(4) { --i: 3; }
+.av {
+  display: inline-grid; place-items: center;
+  width: 54px; height: 54px; margin-right: 18px;
+  border-radius: 50%; vertical-align: middle;
+  background: linear-gradient(135deg, #ff00cc, #7a5cff);
+}
+.tbl span {
+  padding: 6px 16px;
+  border: 2px solid; border-radius: 99px;
+  font-size: 20px;
+}
+.admin { color: var(--admin); }
+.editor { color: var(--editor); }
+.viewer { color: var(--viewer); }
+@keyframes rowIn {
+  0% { opacity: 0; translate: -40px 0; }
+  15%, 85% { opacity: 1; translate: 0 0; }
+  100% { opacity: 0; }
+}

@@ -10,7 +10,7 @@
 Every effect here is a YouTube Short where the code is typed live and the result runs next to it.
 Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, use it.
 
-## Effects (25 out, 156 coming soon 🔜)
+## Effects (34 out, 147 coming soon 🔜)
 
 | # | Effect | Code | Live |
 |---|--------|------|------|
@@ -39,10 +39,19 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | 23 | Bouncing Ball Squash | [code](effects/23-bouncing-ball-squash/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/23-bouncing-ball-squash/) |
 | 24 | Hamburger Menu Morph | [code](effects/24-hamburger-to-x/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/24-hamburger-to-x/) |
 | 25 | Rainbow Conic Orb | [code](effects/25-rainbow-conic-orb/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/25-rainbow-conic-orb/) |
+| 26 | Moving Dot Pattern | [code](effects/26-moving-dot-pattern/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/26-moving-dot-pattern/) |
+| 27 | Candy Stripe Progress | [code](effects/27-candy-stripe-progress/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/27-candy-stripe-progress/) |
+| 28 | Newton's Cradle Loader | [code](effects/28-newtons-cradle/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/28-newtons-cradle/) |
+| 31 | Grid Wave Loader | [code](effects/31-grid-wave-loader/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/31-grid-wave-loader/) |
+| 32 | Infinite Marquee Scroll | [code](effects/32-infinite-marquee/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/32-infinite-marquee/) |
+| 33 | Gradient Underline Animation | [code](effects/33-animated-underline/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/33-animated-underline/) |
+| 35 | Water Ripple Rings | [code](effects/35-ripple-rings/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/35-ripple-rings/) |
+| 37 | Rising Bubbles Background | [code](effects/37-rising-bubbles/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/37-rising-bubbles/) |
+| 161 | Animated Table Rows | [code](effects/161-table-rows-stagger/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/161-table-rows-stagger/) |
 
 ### 🔜 Coming soon
 
-156 more snacks are on the way. A new one lands here the day its Short goes live.
+147 more snacks are on the way. A new one lands here the day its Short goes live.
 [Subscribe on YouTube](https://www.youtube.com/@StyleSheetSnacks) so you don't miss them.
 
 
@@ -51,6 +60,7 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | Tutorial | Code | Live |
 |---|---|---|
 | Build an Animated Landing Page with Pure CSS (Step by Step, Zero JavaScript) | [code](tutorials/landing-page/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/landing-page/) |
+| Build an Image Slider with HTML & CSS Only (Step by Step, No JavaScript) | [code](tutorials/image-slider/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/image-slider/) |
 
 ## Run locally
 

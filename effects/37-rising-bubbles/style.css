@@ -1,0 +1,49 @@
+/* Rising Bubbles Background | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.sky {
+  position: relative;
+  overflow: hidden;
+  width: 860px; height: 340px;
+  border-radius: 24px;
+  background: linear-gradient(#0b3a5c, #061428);
+}
+.sky span:nth-child(1) {
+  --x: 8%; --s: 40px; --d: -.3s;
+}
+.sky span:nth-child(2) {
+  --x: 20%; --s: 70px; --d: -2.7s;
+}
+.sky span:nth-child(3) {
+  --x: 34%; --s: 30px; --d: -4s;
+}
+.sky span:nth-child(4) {
+  --x: 47%; --s: 90px; --d: -1.5s;
+}
+.sky span:nth-child(5) {
+  --x: 60%; --s: 44px; --d: -3.3s;
+}
+.sky span:nth-child(6) {
+  --x: 72%; --s: 64px; --d: -.7s;
+}
+.sky span:nth-child(7) {
+  --x: 85%; --s: 36px; --d: -2s;
+}
+.sky span:nth-child(8) {
+  --x: 89%; --s: 54px; --d: -4.5s;
+}
+.sky span {
+  position: absolute;
+  left: var(--x);
+  width: var(--s);
+  aspect-ratio: 1;
+  border: 3px solid #a0fff0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%,
+    #ffffffdd, #00ffcc55 60%);
+  bottom: -100px;
+  animation: rise 5s ease-in infinite;
+  animation-delay: var(--d);
+}
+@keyframes rise {
+  to { translate: 0 -440px; opacity: 0; }
+}

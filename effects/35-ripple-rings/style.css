@@ -1,0 +1,19 @@
+/* Water Ripple Rings | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.ripple {
+  position: relative;
+  width: 300px; aspect-ratio: 1;
+}
+.ripple span {
+  position: absolute; inset: 0;
+  border: 5px solid #00ffcc; border-radius: 50%;
+  box-shadow: 0 0 24px #00ffcc,
+    inset 0 0 24px #00ffcc;
+  animation: ripple 2.4s ease-out infinite;
+}
+.ripple span:nth-child(2) { animation-delay: -.8s; }
+.ripple span:nth-child(3) { animation-delay: -1.6s; }
+@keyframes ripple {
+  from { scale: 0; opacity: 1; }
+  to { scale: 1; opacity: 0; }
+}
