@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | StyleSheet Snacks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <b class="brand">🍬 Snacky<span>ADMIN</span></b>
+    <nav>
+      <a class="active">📊 Dashboard</a>
+      <a>👥 Users</a>
+      <a>📦 Orders</a>
+      <a>⚙️ Settings</a>
+    </nav>
+  </aside>
+  <main>
+    <header class="top">
+      <h1>Users</h1>
+      <button class="add">+ Add user</button>
+    </header>
+    <section class="stats">
+      <div class="stat"><small>Total users</small><b class="count">3</b></div>
+      <div class="stat"><small>Active today</small><b>128</b></div>
+      <div class="stat"><small>Revenue</small><b>$8.4k</b></div>
+    </section>
+    <section class="panel">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Email</th><th>Role</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b class="avatar">A</b>Ava Stone</td>
+            <td>ava@snacky.dev</td>
+            <td><span class="role Admin">Admin</span></td>
+            <td><button class="edit" data-i="0">✎</button>
+                <button class="delete" data-i="0">✕</button></td>
+          </tr>
+          <tr>
+            <td><b class="avatar">L</b>Leo Park</td>
+            <td>leo@snacky.dev</td>
+            <td><span class="role Editor">Editor</span></td>
+            <td><button class="edit" data-i="1">✎</button>
+                <button class="delete" data-i="1">✕</button></td>
+          </tr>
+          <tr>
+            <td><b class="avatar">M</b>Mia Rossi</td>
+            <td>mia@snacky.dev</td>
+            <td><span class="role Viewer">Viewer</span></td>
+            <td><button class="edit" data-i="2">✎</button>
+                <button class="delete" data-i="2">✕</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <div class="modal">
+    <form>
+      <h2>Add user</h2>
+      <label>Name <input name="fullName" required></label>
+      <label>Email <input name="email" type="email" required></label>
+      <label>Role
+        <select name="role">
+          <option>Admin</option>
+          <option>Editor</option>
+          <option>Viewer</option>
+        </select>
+      </label>
+      <div class="actions">
+        <button type="button" class="cancel">Cancel</button>
+        <button class="save">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

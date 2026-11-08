@@ -1,0 +1,18 @@
+/* Heartbeat Monitor Line | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.ecg {
+  width: 760px;
+}
+.ecg path {
+  fill: none;
+  stroke: #00ff88;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px #00ff88);
+  stroke-dasharray: 300 200;
+  animation: beat 1.6s linear infinite;
+}
+@keyframes beat {
+  from { stroke-dashoffset: 500; }
+  to { stroke-dashoffset: 0; }
+}

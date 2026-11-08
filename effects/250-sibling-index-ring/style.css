@@ -1,0 +1,27 @@
+/* CSS Can Count sibling-index() | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.ring {
+  position: relative;
+  width: 360px; aspect-ratio: 1;
+}
+.ring span { position: absolute; inset: 0; }
+.ring span::before {
+  content: ''; position: absolute; top: 0;
+  left: calc(50% - 22px);
+  width: 44px; aspect-ratio: 1; border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 24px currentColor;
+}
+.ring span {
+  rotate: calc(360deg / sibling-count()
+    * sibling-index());
+  color: hsl(calc(360deg / sibling-count()
+    * sibling-index()) 90% 60%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ring span {
+    animation: fade 1.2s linear infinite;
+    animation-delay: calc(sibling-index() * 0.1s - 1.2s);
+  }
+}
+@keyframes fade { to { opacity: 0.15; } }
