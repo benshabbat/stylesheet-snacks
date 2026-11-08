@@ -1,0 +1,42 @@
+body { margin: 0; }
+
+/* 1. The Page */
+.page {
+  min-height: 100vh; display: grid; place-items: center;
+  font: 18px system-ui, sans-serif; color: #1d1b33;
+  background: #f4f1ff;
+}
+.card {
+  width: min(460px, 90vw); box-sizing: border-box;
+  display: grid; gap: 8px; padding: 28px;
+  border-radius: 20px; background: #fff;
+  box-shadow: 0 20px 50px #2b1d6e22;
+}
+.card h1 { margin: 0 0 12px; font-size: 34px; line-height: 1.2; }
+.card label { font-size: 15px; font-weight: 600; color: #4b4675; }
+.card input, .card textarea {
+  font: inherit; padding: 10px 12px;
+  border: 2px solid #8f86c9; border-radius: 12px;
+}
+.card :focus-visible { outline: 3px solid #6d4aff; outline-offset: 2px; }
+.card button {
+  margin-top: 8px; padding: 12px; border: 0; border-radius: 12px;
+  font: 700 17px system-ui, sans-serif; color: #fff; background: #6d4aff;
+}
+
+/* 3. Now: field-sizing */
+.card textarea {
+  field-sizing: content;
+  min-height: 5em;
+  max-height: 12em;
+}
+
+/* 4. Inputs Grow Too */
+.card input {
+  field-sizing: content;
+  min-width: 8ch; max-width: 100%;
+  justify-self: start;
+}
+
+/* 6. Now: text-wrap: balance */
+.card h1 { text-wrap: balance; }

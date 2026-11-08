@@ -64,6 +64,7 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | Build an Animated Landing Page with Pure CSS (Step by Step, Zero JavaScript) | [code](tutorials/landing-page/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/landing-page/) |
 | Build an Image Slider with HTML & CSS Only (Step by Step, No JavaScript) | [code](tutorials/image-slider/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/image-slider/) |
 | Build an Admin Dashboard with CRUD | HTML, CSS & JavaScript (Step by Step) | [code](tutorials/admin-dashboard/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/admin-dashboard/) |
+| New in CSS #1: field-sizing & text-wrap: balance (Before vs Now, Zero JavaScript) | [code](tutorials/new-css-1/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/new-css-1/) |
 
 ## Run locally
 
