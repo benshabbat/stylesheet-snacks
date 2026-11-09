@@ -10,7 +10,7 @@
 Every effect here is a YouTube Short where the code is typed live and the result runs next to it.
 Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, use it.
 
-## Effects (36 out, 173 coming soon 🔜)
+## Effects (37 out, 182 coming soon 🔜)
 
 | # | Effect | Code | Live |
 |---|--------|------|------|
@@ -50,10 +50,11 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | 43 | Heartbeat Monitor Line | [code](effects/43-heartbeat-ecg-line/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/43-heartbeat-ecg-line/) |
 | 161 | Animated Table Rows | [code](effects/161-table-rows-stagger/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/161-table-rows-stagger/) |
 | 250 | CSS Can Count sibling-index() | [code](effects/250-sibling-index-ring/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/250-sibling-index-ring/) |
+| 252 | Neon Clock Pure CSS | [code](effects/252-neon-clock/style.css) | [demo](https://benshabbat.github.io/stylesheet-snacks/effects/252-neon-clock/) |
 
 ### 🔜 Coming soon
 
-173 more snacks are on the way. A new one lands here the day its Short goes live.
+182 more snacks are on the way. A new one lands here the day its Short goes live.
 [Subscribe on YouTube](https://www.youtube.com/@StyleSheetSnacks) so you don't miss them.
 
 

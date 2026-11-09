@@ -1,0 +1,38 @@
+/* Neon Clock Pure CSS | StyleSheet Snacks | https://www.youtube.com/@StyleSheetSnacks */
+
+.clock {
+  position: relative; width: 300px; aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(#f37 7px, #0b0c1e 8px);
+  box-shadow: 0 0 0 6px #1d1f3f, 0 0 40px #0fc6;
+}
+.clock::before, .clock::after {
+  content: ''; position: absolute; inset: 12px;
+  border-radius: 50%;
+}
+.clock::before {
+  background: repeating-conic-gradient(from -.4deg,
+    #889 0 .8deg, #0000 0 6deg);
+  mask: radial-gradient(closest-side, #0000 90%, #000 0);
+}
+.clock::after {
+  background: repeating-conic-gradient(from -1deg,
+    #0fc 0 2deg, #0000 0 30deg);
+  mask: radial-gradient(closest-side, #0000 80%, #000 0);
+}
+.radar {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(#0000 300deg, #f375);
+}
+.clock i {
+  position: absolute; z-index: 1; left: 50%; bottom: 50%;
+  width: 6px; height: 36%; translate: -50%;
+  transform-origin: bottom;
+  border-radius: 9px; background: #fff;
+}
+.clock .h { width: 8px; height: 24%; }
+.clock .s { width: 3px; height: 42%; background: #f37; }
+.h { animation: spin 43200s -36600s linear infinite; }
+.m { animation: spin 3600s -600s linear infinite; }
+.s, .radar { animation: spin 60s steps(60) infinite; }
+@keyframes spin { to { rotate: 1turn; } }
