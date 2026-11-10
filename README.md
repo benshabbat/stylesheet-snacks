@@ -10,7 +10,7 @@
 Every effect here is a YouTube Short where the code is typed live and the result runs next to it.
 Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, use it.
 
-## Effects (37 out, 182 coming soon 🔜)
+## Effects (37 out, 198 coming soon 🔜)
 
 | # | Effect | Code | Live |
 |---|--------|------|------|
@@ -54,7 +54,7 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 
 ### 🔜 Coming soon
 
-182 more snacks are on the way. A new one lands here the day its Short goes live.
+198 more snacks are on the way. A new one lands here the day its Short goes live.
 [Subscribe on YouTube](https://www.youtube.com/@StyleSheetSnacks) so you don't miss them.
 
 
@@ -66,6 +66,7 @@ Each folder has a tiny `index.html` and the full `style.css`. Open it, copy it, 
 | Build an Image Slider with HTML & CSS Only (Step by Step, No JavaScript) | [code](tutorials/image-slider/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/image-slider/) |
 | Build an Admin Dashboard with CRUD | HTML, CSS & JavaScript (Step by Step) | [code](tutorials/admin-dashboard/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/admin-dashboard/) |
 | New in CSS #1: field-sizing & text-wrap: balance (Before vs Now, Zero JavaScript) | [code](tutorials/new-css-1/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/new-css-1/) |
+| 9 Premium CSS Clocks (Zero JavaScript) – Flip Clock, Digital Counter, Radar, Activity Rings & More | [code](tutorials/premium-clocks/) | [demo](https://benshabbat.github.io/stylesheet-snacks/tutorials/premium-clocks/) |
 
 ## Run locally
 

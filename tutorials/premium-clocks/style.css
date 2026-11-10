@@ -1,0 +1,371 @@
+body { margin: 0; }
+
+/* The Page */
+.page {
+  min-height: 100vh; padding: 40px;
+  font: 17px system-ui, sans-serif; color: #e8e9ff;
+  background: #0b0c1e;
+}
+.page h1 { margin: 0 0 32px; font-size: 40px; }
+.demo {
+  display: grid; place-items: center;
+  margin-bottom: 40px; padding: 56px 20px; border-radius: 24px;
+  background: radial-gradient(#ffffff14 1px, #0000 1.5px) 0 0 / 24px 24px, #15173a;
+}
+@keyframes spin { to { rotate: 1turn; } }
+
+/* 1. Neon Clock */
+.neon {
+  position: relative; width: 280px; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(#f37 7px, #0b0c1e 8px);
+  box-shadow: 0 0 0 6px #1d1f3f, 0 0 40px #0fc6;
+}
+.neon::before, .neon::after {
+  content: ''; position: absolute; inset: 12px; border-radius: 50%;
+}
+.neon::before {
+  background: repeating-conic-gradient(from -.4deg, #889 0 .8deg, #0000 0 6deg);
+  mask: radial-gradient(closest-side, #0000 90%, #000 0);
+}
+.neon::after {
+  background: repeating-conic-gradient(from -1deg, #0fc 0 2deg, #0000 0 30deg);
+  mask: radial-gradient(closest-side, #0000 80%, #000 0);
+}
+.radar {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(#0000 300deg, #f375);
+}
+.neon i {
+  position: absolute; z-index: 1; left: 50%; bottom: 50%;
+  width: 6px; height: 36%; translate: -50%; transform-origin: bottom;
+  border-radius: 9px; background: #fff;
+}
+.neon .h { width: 8px; height: 24%; animation: spin 43200s -36600s linear infinite; }
+.neon .m { animation: spin 3600s -600s linear infinite; }
+.neon .s, .radar { animation: spin 60s steps(60) infinite; }
+.neon .s { width: 3px; height: 42%; background: #f37; }
+
+/* 2. Neon Radar */
+.pro {
+  background: radial-gradient(#f37 7px, #0000 8px), radial-gradient(#0f2a3a, #0b0c1e 70%);
+  box-shadow: 0 0 0 6px #1d1f3f, 0 0 0 7px #0fc6, 0 0 60px #0fc5, inset 0 0 40px #0fc3;
+}
+.pro .radar {
+  inset: 12px;
+  background: conic-gradient(#0000 270deg, #0fc2, #0fc8 359deg, #0fc 0);
+}
+.hud {
+  position: absolute; inset: -22px; border-radius: 50%;
+  background: repeating-conic-gradient(#0fc8 0 8deg, #0000 0 20deg);
+  mask: radial-gradient(closest-side, #0000 calc(100% - 3px), #000 0);
+}
+.pro b {
+  position: absolute; width: 8px; aspect-ratio: 1; border-radius: 50%;
+  background: #0fc; box-shadow: 0 0 12px #0fc; opacity: 0;
+}
+.pro b:nth-child(3) { left: 66%; top: 24%; animation-delay: .4s; }
+.pro b:nth-child(4) { left: 72%; top: 70%; animation-delay: 1.5s; }
+.pro b:nth-child(5) { left: 26%; top: 62%; animation-delay: 2.6s; }
+@media (prefers-reduced-motion: no-preference) {
+  .pro .radar { animation: spin 4s linear infinite; }
+  .hud { animation: spin 24s linear infinite reverse; }
+  .pro b { animation: blip 4s infinite; }
+}
+@keyframes blip { 0% { opacity: 1; scale: 1.6; } 60%, 100% { opacity: 0; scale: 1; } }
+.pro i { box-shadow: 0 0 10px #0fc; }
+.pro .s { box-shadow: 0 0 10px #f37; }
+
+/* 3. Digital Glow */
+@property --a {
+  syntax: '<angle>'; inherits: true; initial-value: 0deg;
+}
+.digital {
+  --beam: conic-gradient(from var(--a), #0000 20%, #00e5ff 40%, #0000 50% 70%, #b388ff 90%, #0000);
+  position: relative; display: flex; align-items: center;
+  padding: 22px 40px 40px; border-radius: 26px; border: 2px solid #0000;
+  background:
+    linear-gradient(#0b0c1e, #0b0c1e) padding-box,
+    var(--beam) border-box,
+    linear-gradient(#ffffff1f, #ffffff1f) border-box;
+  box-shadow: 0 24px 60px #0009;
+  font: 800 80px system-ui, sans-serif; font-variant-numeric: tabular-nums;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .digital { animation: turn 4s linear infinite; }
+}
+@keyframes turn { to { --a: 1turn; } }
+@property --n {
+  syntax: '<integer>'; inherits: false; initial-value: 0;
+}
+.digital span { display: inline-block; counter-reset: n var(--n); }
+.digital span::after {
+  content: counter(n, decimal-leading-zero);
+  background: linear-gradient(#fff 30%, #00e5ff); background-clip: text; color: #0000;
+  filter: drop-shadow(0 0 16px #00e5ffaa);
+}
+.digital .h { --to: 24; animation: count 86400s steps(24) -36600s infinite; }
+.digital .m { --to: 60; animation: count 3600s steps(60) -600s infinite; }
+.digital .s { --to: 60; animation: count 60s steps(60) infinite; }
+@keyframes count { to { --n: var(--to); } }
+.digital b { margin: 0 6px 10px; color: #00e5ff; animation: blink 1s steps(1) infinite; }
+.bar {
+  position: absolute; inset: auto 40px 20px; height: 4px; border-radius: 4px;
+  background: linear-gradient(90deg, #6d4aff, #00e5ff); box-shadow: 0 0 12px #00e5ff;
+  transform-origin: left; animation: fill 60s linear infinite;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .digital .s { animation: count 60s steps(60) infinite, pop 1s infinite; }
+}
+@keyframes blink { 50% { opacity: .25; } }
+@keyframes fill { from { scale: 0 1; } }
+@keyframes pop { from { scale: 1.18; } 30%, to { scale: 1; } }
+
+/* 4. Flip Clock */
+.flip { display: flex; align-items: center; gap: 16px; }
+.flip > b { font: 800 70px system-ui, sans-serif; color: #ffffff55; }
+.card {
+  position: relative; width: 150px; height: 170px; perspective: 600px;
+  font: 800 108px/170px system-ui, sans-serif; font-variant-numeric: tabular-nums; text-align: center;
+  counter-reset: n var(--n) p mod(calc(var(--n) + 59), 60);
+  filter: drop-shadow(0 18px 24px #0009);
+}
+.card::before, .card::after, .card span {
+  position: absolute; inset: 0; border-radius: 16px;
+  background: linear-gradient(#34376a, #24264a calc(50% - 1px), #07081a 0 calc(50% + 1px), #1d1f3f 0, #15173a);
+  box-shadow: inset 0 1px 0 #ffffff26;
+}
+.card::before { content: counter(n, decimal-leading-zero); clip-path: inset(0 0 50%); }
+.card::after { content: counter(p, decimal-leading-zero); clip-path: inset(50% 0 0); }
+.card .old::before { content: counter(p, decimal-leading-zero); }
+.card .new::before { content: counter(n, decimal-leading-zero); }
+.card .old { clip-path: inset(0 0 50%); rotate: x -90deg; }
+.card .new { clip-path: inset(50% 0 0); rotate: x 90deg; z-index: 1; }
+.card.s { --to: 60; animation: count 60s steps(60) infinite; }
+.card.m { --to: 60; animation: count 3600s steps(60) -600s infinite; }
+.card.s .old { animation: down 1s infinite; }
+.card.s .new { animation: up 1s infinite; }
+.card.m .old { animation: down-m 60s infinite; }
+.card.m .new { animation: up-m 60s infinite; }
+@keyframes down {
+  from { rotate: x 0deg; filter: brightness(1); animation-timing-function: ease-in; }
+  30%, to { rotate: x -90deg; filter: brightness(.4); }
+}
+@keyframes up {
+  from, 30% { rotate: x 90deg; filter: brightness(1.8); animation-timing-function: ease-out; }
+  52% { rotate: x -12deg; filter: none; }
+  64%, to { rotate: x 0deg; }
+}
+@keyframes down-m { from { rotate: x 0deg; } .8%, to { rotate: x -90deg; } }
+@keyframes up-m { from, .8% { rotate: x 90deg; } 1.6%, to { rotate: x 0deg; } }
+
+/* 5. Activity Rings */
+.rings { position: relative; width: 270px; aspect-ratio: 1; }
+.rings i {
+  position: absolute; inset: var(--in); border-radius: 50%;
+  background: conic-gradient(var(--c1), var(--c) var(--a), color-mix(in srgb, var(--c) 16%, #0000) 0);
+  mask: radial-gradient(closest-side, #0000 calc(100% - 26px), #000 calc(100% - 25px));
+  animation: turn var(--t) linear var(--d, 0s) infinite;
+}
+.rings i::before, .rings i::after {
+  content: ''; position: absolute; left: calc(50% - 13px); top: 0;
+  width: 26px; aspect-ratio: 1; border-radius: 50%; background: var(--c1);
+}
+.rings i::after {
+  background: var(--c); box-shadow: 0 0 10px #000a;
+  transform-origin: 13px calc(135px - var(--in)); rotate: var(--a);
+}
+.rings .s { --in: 0px; --c1: #b0003a; --c: #ff2d75; --t: 60s; }
+.rings .m { --in: 30px; --c1: #3d9400; --c: #b6ff3b; --t: 3600s; --d: -600s; }
+.rings .h { --in: 60px; --c1: #0077b6; --c: #34f1ff; --t: 43200s; --d: -36600s; }
+.hh { --to: 24; animation: count 86400s steps(24) -36600s infinite; }
+.mm { --to: 60; animation: count 3600s steps(60) -600s infinite; }
+.hh, .mm { counter-reset: n var(--n); }
+.hh::after, .mm::after { content: counter(n, decimal-leading-zero); }
+.rings .time {
+  position: absolute; inset: 0; margin: 0;
+  display: flex; align-items: center; justify-content: center;
+  font: 800 34px system-ui, sans-serif; font-variant-numeric: tabular-nums;
+}
+
+/* 6. Orbit */
+.orbit {
+  position: relative; width: 290px; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(#141633, #05060f 70%);
+  box-shadow: 0 0 0 1px #ffffff1a, 0 20px 60px #0009;
+}
+.stars {
+  position: absolute; inset: 0; border-radius: 50%;
+  background:
+    radial-gradient(#fffc 1px, #0000 1.5px) 11px 17px / 53px 61px,
+    radial-gradient(#fff8 1px, #0000 1.5px) 37px 5px / 71px 47px,
+    radial-gradient(#fff6 .8px, #0000 1.2px) 23px 41px / 97px 83px;
+}
+.sun {
+  position: absolute; inset: calc(50% - 46px); border-radius: 50%;
+  background:
+    radial-gradient(circle, #fff6d5 0 9px, #ffd166 13px, #ff9f1c 17px, #ff9f1c66 19px, #0000 50%),
+    repeating-conic-gradient(#ffd16655 0 6deg, #0000 0 18deg);
+  mask: radial-gradient(#000 40%, #0000 70%);
+}
+.orbit i {
+  position: absolute; inset: var(--in); border-radius: 50%;
+  border: 1px dashed #ffffff26;
+  animation: spin var(--t) linear var(--d, 0s) infinite;
+}
+.orbit i::before {
+  content: ''; position: absolute; inset: -2px; border-radius: 50%;
+  background: conic-gradient(#0000 200deg, var(--c));
+  mask: radial-gradient(closest-side, #0000 calc(100% - 4px), #000 calc(100% - 3px));
+}
+.orbit i::after {
+  content: ''; position: absolute; left: 50%; top: 0;
+  width: var(--size); aspect-ratio: 1; translate: -50% -50%; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff, var(--c) 45%, #000 120%);
+  box-shadow: 0 0 18px var(--c);
+}
+.orbit .s { --in: 10px; --c: #00e5ff; --size: 14px; --t: 60s; }
+.orbit .m { --in: 52px; --c: #ff3d7f; --size: 20px; --t: 3600s; --d: -600s; }
+.orbit .h { --in: 92px; --c: #b388ff; --size: 26px; --t: 43200s; --d: -36600s; }
+@media (prefers-reduced-motion: no-preference) {
+  .sun { animation: spin 20s linear infinite; }
+  .stars { animation: twinkle 3s ease-in-out infinite alternate; }
+}
+@keyframes twinkle { to { opacity: .35; } }
+
+/* 7. Glass Watch */
+#glass {
+  background:
+    radial-gradient(circle, #ff3d7f, #0000 60%) 15% 30% / 45% 140% no-repeat,
+    radial-gradient(circle, #00b4ff, #0000 60%) 85% 70% / 45% 140% no-repeat,
+    #15173a;
+}
+.watch {
+  position: relative; width: 270px; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+  background: #0b0c1e59; backdrop-filter: blur(18px) saturate(170%);
+  box-shadow: inset 0 1px 1px #fff8, inset 0 0 0 1px #ffffff2e, 0 30px 60px #0009;
+  transition: transform .6s cubic-bezier(.2, .8, .2, 1);
+}
+.watch::before {
+  content: ''; position: absolute; inset: 14px; border-radius: 50%;
+  background: repeating-conic-gradient(from -1deg, #fff 0 2deg, #0000 0 30deg);
+  mask: radial-gradient(closest-side, #0000 86%, #000 0);
+}
+.watch:hover { transform: perspective(700px) rotateX(16deg) rotateY(-20deg) scale(1.05); }
+@media (prefers-reduced-motion: no-preference) {
+  #glass { animation: drift 7s ease-in-out infinite alternate; }
+}
+@keyframes drift { to { background-position: 60% 100%, 30% 0, 0 0; } }
+.watch i {
+  position: absolute; z-index: 1; left: 50%; bottom: 50%;
+  width: 6px; height: 34%; translate: -50%; transform-origin: bottom;
+  border-radius: 6px; background: #fff; box-shadow: 4px 6px 8px #0007;
+}
+.watch .h { width: 8px; height: 22%; animation: spin 43200s -36600s linear infinite; }
+.watch .m { animation: spin 3600s -600s linear infinite; }
+.watch .s { width: 2px; height: 40%; background: #ffb347; animation: spin 60s linear infinite; }
+.sub {
+  position: absolute; left: calc(50% - 30px); top: 62%; width: 60px; aspect-ratio: 1; border-radius: 50%;
+  background: repeating-conic-gradient(#fff6 0 1deg, #0000 0 30deg), #0b0c1e66;
+  box-shadow: inset 0 0 0 1px #ffffff40;
+}
+.sub i { height: 44%; width: 2px; box-shadow: none; background: #ffb347; animation: spin 60s linear infinite; }
+.date {
+  position: absolute; right: 44px; top: calc(50% - 13px);
+  width: 30px; height: 26px; border-radius: 6px;
+  background: #fff; color: #1d1b33; font: 700 15px/26px system-ui, sans-serif; text-align: center;
+}
+.glare {
+  position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
+  background: linear-gradient(115deg, #0000 35%, #ffffff40 48%, #0000 60%) 100% 0 / 300% 100%;
+  transition: background-position .9s;
+}
+.watch:hover .glare { background-position: 0 0; }
+
+/* 8. Pendulum */
+.pendulum {
+  position: relative; width: 240px; padding: 20px 20px 210px;
+  border-radius: 120px 120px 28px 28px; overflow: hidden;
+  background: linear-gradient(90deg, #3b2412, #6b4423 40%, #3b2412);
+  box-shadow: inset 0 0 0 4px #c8a165, 0 24px 50px #0009;
+}
+.pendulum::after {
+  content: ''; position: absolute; inset: 244px 22px 18px; border-radius: 0 0 14px 14px;
+  background: linear-gradient(120deg, #ffffff1f 0 18%, #0000 30% 70%, #ffffff12 80%);
+  box-shadow: inset 0 0 0 1px #ffffff26;
+}
+.face {
+  position: relative; aspect-ratio: 1; border-radius: 50%;
+  border: 6px solid #0000;
+  background:
+    repeating-radial-gradient(#0000 0 3px, #0000000d 3px 4px) padding-box,
+    radial-gradient(#fffaf0, #efe2c4) padding-box,
+    conic-gradient(#fff3c4, #c8a165, #8a5a1a, #fff3c4, #c8a165, #8a5a1a, #fff3c4) border-box;
+  box-shadow: inset 0 0 20px #0003, 0 6px 16px #0006;
+  font: 700 22px Georgia, serif; color: #3b2412;
+}
+.face b { position: absolute; }
+.face b:nth-child(1) { top: 10px; left: 50%; translate: -50%; }
+.face b:nth-child(2) { right: 12px; top: 50%; translate: 0 -50%; }
+.face b:nth-child(3) { bottom: 10px; left: 50%; translate: -50%; }
+.face b:nth-child(4) { left: 14px; top: 50%; translate: 0 -50%; }
+.face i {
+  position: absolute; left: 50%; bottom: 50%;
+  width: 5px; height: 34%; translate: -50%; transform-origin: bottom;
+  border-radius: 5px; background: #2b2118; box-shadow: 2px 3px 4px #0005;
+}
+.face .h { width: 7px; height: 22%; animation: spin 43200s -36600s linear infinite; }
+.face .m { animation: spin 3600s -600s linear infinite; }
+.face .s {
+  width: 2px; height: 40%; background: #c0392b;
+  animation: spin 60s steps(60) infinite, recoil 1s infinite;
+}
+@keyframes recoil { from { transform: rotate(2.5deg); } 12% { transform: rotate(-1deg); } 24%, to { transform: none; } }
+.rod {
+  position: absolute; left: calc(50% - 2px); top: 250px;
+  width: 4px; height: 150px; transform-origin: top; rotate: 14deg;
+  background: linear-gradient(#c8a165, #ffd27a);
+}
+.rod::after {
+  content: ''; position: absolute; left: 50%; bottom: -24px; translate: -50%;
+  width: 48px; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff3c4, #d4a24c 45%, #8a5a1a);
+  box-shadow: 0 0 20px #ffd27a55;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .rod { animation: swing 1s ease-in-out infinite alternate; }
+}
+@keyframes swing { to { rotate: -14deg; } }
+
+/* 9. LED Ring */
+.leds { position: relative; width: 280px; aspect-ratio: 1; filter: drop-shadow(0 0 8px #00e5ff99); }
+.leds i {
+  position: absolute; inset: var(--in); border-radius: 50%;
+  mask:
+    repeating-conic-gradient(from -2deg, #000 0 4deg, #0000 0 6deg),
+    radial-gradient(closest-side, #0000 calc(100% - 16px), #000 calc(100% - 15px));
+  mask-composite: intersect;
+  animation: turn var(--t) steps(60) var(--d, 0s) infinite;
+}
+.leds .s {
+  --in: 0px; --t: 60s;
+  background:
+    conic-gradient(from calc(var(--a) - 120deg), #0000, #00e5ff 120deg, #0000 0),
+    #00e5ff22;
+}
+.leds .m {
+  --in: 26px; --t: 3600s; --d: -600s;
+  background: conic-gradient(#ff3d7f var(--a), #ff3d7f22 0);
+}
+.pulse {
+  position: absolute; inset: 56px; border-radius: 50%;
+  box-shadow: 0 0 0 2px #00e5ff, inset 0 0 30px #00e5ff55;
+}
+.leds .time {
+  position: absolute; inset: 0; margin: 0;
+  display: flex; align-items: center; justify-content: center;
+  font: 800 44px system-ui, sans-serif; font-variant-numeric: tabular-nums; color: #fff;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pulse { animation: pulse 1s ease-out infinite; }
+}
+@keyframes pulse { from { scale: .7; opacity: 1; } to { scale: 1.05; opacity: 0; } }
